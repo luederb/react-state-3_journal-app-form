@@ -6,7 +6,7 @@ import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
 
-const entries = [
+const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
@@ -35,8 +35,10 @@ const entries = [
     notes: "My React-ion when I learned about React: Yay!",
   },
 ];
+export { initialEntries };
 
-export default function EntriesSection() {
+export default function EntriesSection({ entries }) {
+  console.log("Entries: ", entries);
   return (
     <section className="entries-section">
       <Tabs>
